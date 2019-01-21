@@ -22,14 +22,14 @@ namespace SimpleFenceBuilder{
 				}
 			}
 		}
-		public static PivotTransform[] SFB_ArraySetup(this PivotTransform[] pt){
+		public static PivotTransform[] SFB_ArraySetup(this PivotTransform[] pt,bool always = false){
 			
 			for(int i = 0; i<pt.Length; i++){
 				pt[i] = pt[i].SFB_Setup();
 			}
 			return pt;
 		}
-		public static PivotTransform SFB_Setup(this PivotTransform pt){
+		public static PivotTransform SFB_Setup(this PivotTransform pt, bool always = false){
 			
 			if(pt.Pivot_Transform != null){
 				if(pt.ReImport){
@@ -40,6 +40,10 @@ namespace SimpleFenceBuilder{
 					pt = pt.SFB_CalcMinMaxOffset();
             		pt = pt.SFB_PivotUpdate();
 					pt.ChangePivot = false;
+				}
+				if(always){
+					pt = pt.SFB_CalcMinMaxOffset();
+            		pt = pt.SFB_PivotUpdate();
 				}
 				pt = pt.SFB_PivotReset();
 				}
