@@ -10,3 +10,7 @@ If anything goes wrong, you can simple reimport the Model by hitting Re-Import i
 
 RoadMap SFB_PivotChanger:
 - Pivot Adjustment for 2D Objects(Sprites, UI)
+
+
+Pivotrelated Stuff based on Süleyman Yasir Kula https://forum.unity.com/members/yasirkula.56169/ code. https://github.com/yasirkula/UnityAdjustPivot
+
